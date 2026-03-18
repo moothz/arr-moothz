@@ -12,7 +12,7 @@ Abaixo estão os endereços para acessar cada serviço na sua rede local:
 | **Jellyseerr** | 5055 | [http://192.168.3.10:5055](http://192.168.3.10:5055) | Solicitações de Mídia |
 | **Sonarr** | 8991 | [http://192.168.3.10:8991](http://192.168.3.10:8991) | Gerenciamento de Séries |
 | **Radarr** | 7878 | [http://192.168.3.10:7878](http://192.168.3.10:7878) | Gerenciamento de Filmes |
-| **Readarr** | 8787 | [http://192.168.3.10:8787](http://192.168.3.10:8787) | Gerenciamento de Livros |
+| **Bookshelf** | 8787 | [http://192.168.3.10:8787](http://192.168.3.10:8787) | Gerenciamento de Livros (Fork do Readarr) |
 | **Jackett** | 9117 | [http://192.168.3.10:9117](http://192.168.3.10:9117) | Agregador de Indexadores (Trackers) |
 | **qBittorrent** | 8080 | [http://192.168.3.10:8080](http://192.168.3.10:8080) | Cliente de Download |
 
@@ -33,7 +33,7 @@ As configurações de cada container estão localizadas na pasta `./config` no d
 - `./config/jellyseerr`
 - `./config/sonarr`
 - `./config/radarr`
-- `./config/readarr`
+- `./config/bookshelf`
 - `./config/jackett`
 - `./config/qbittorrent`
 
@@ -42,7 +42,7 @@ Mapeado para o disco externo em `/mnt/wd2/arr`:
 - **Downloads:** `/mnt/wd2/arr/downloads` (Mapeado como `/downloads` nos containers)
 - **Filmes:** `/mnt/wd2/arr/media/movies` (Mapeado como `/movies` no Radarr)
 - **Séries:** `/mnt/wd2/arr/media/tv` (Mapeado como `/tv` no Sonarr)
-- **Livros:** `/mnt/wd2/arr/media/books` (Mapeado como `/books` no Readarr)
+- **Livros:** `/mnt/wd2/arr/media/books` (Mapeado como `/books` no Bookshelf)
 - **Biblioteca Geral:** `/mnt/wd2/arr/media` (Mapeado como `/media` no Jellyfin)
 
 ---

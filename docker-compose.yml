@@ -58,15 +58,15 @@ services:
       - 7878:7878
     restart: unless-stopped
 
-  readarr:
-    image: lsiodev/readarr:develop
-    container_name: readarr
+  bookshelf:
+    image: ghcr.io/pennydreadful/bookshelf:softcover
+    container_name: bookshelf
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=UTC
     volumes:
-      - ./config/readarr:/config
+      - ./config/bookshelf:/config
       - /mnt/wd2/arr/media/books:/books
       - /mnt/wd2/arr/downloads:/downloads
     ports:
