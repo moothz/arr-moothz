@@ -17,6 +17,8 @@ Abaixo estão os endereços para acessar cada serviço na sua rede local:
 | **qBittorrent** | 8080 | [http://192.168.3.10:8080](http://192.168.3.10:8080) | Cliente de Download |
 
 ### 🌐 Acesso Externo (Cloudflare Tunnel)
+- **Jellyfin:** [https://jelly.moothz.win](https://jelly.moothz.win)
+- **Jellyseerr:** [https://selly.moothz.win](https://selly.moothz.win)
 - **qBittorrent:** [https://qb.moothz.win](https://qb.moothz.win)
 
 ---
