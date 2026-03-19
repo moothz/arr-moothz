@@ -91,10 +91,12 @@ services:
     image: chimpanzeesweetrolls/overseerrrequestviatelegrambot:latest
     container_name: overseerr-bot
     environment:
-      - BOT_TOKEN=8366447590:AAE5BDsgMUv16FghiuLVmQQQq7ybe_hXc7k
-      - OVERSEERR_API_KEY=MTc3Mzg2NTY4MTQ4MGNiMzEyZjVlLTlmZWItNDYwYy05ODhmLWU5YzlmNzMyZjRmMw==
-      - OVERSEERR_URL=http://jellyseerr:5055
-      - ALLOWED_USERS=382359487
+      OVERSEERR_API_URL: "http://jellyseerr:5055/api/v1"
+      OVERSEERR_API_KEY: "MTc3Mzg2NTY4MTQ4MGNiMzEyZjVlLTlmZWItNDYwYy05ODhmLWU5YzlmNzMyZjRmMw=="
+      TELEGRAM_TOKEN: "8366447590:AAE5BDsgMUv16FghiuLVmQQQq7ybe_hXc7k"
+      PASSWORD: "moothz_password" # Você pode alterar esta senha depois no Telegram
+    volumes:
+      - ./config/overseerr-bot:/app/data
     restart: unless-stopped
 
   qbittorrent:
