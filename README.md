@@ -15,6 +15,7 @@ Abaixo estão os endereços para acessar cada serviço na sua rede local:
 | **Bookshelf** | 8787 | [http://192.168.3.10:8787](http://192.168.3.10:8787) | Gerenciamento de Livros (Fork do Readarr) |
 | **Jackett** | 9117 | [http://192.168.3.10:9117](http://192.168.3.10:9117) | Agregador de Indexadores (Trackers) |
 | **qBittorrent** | 8080 | [http://192.168.3.10:8080](http://192.168.3.10:8080) | Cliente de Download |
+| **Overseerr-Bot** | - | Telegram Bot | Pedidos de filmes/séries via Telegram |
 
 ### 🌐 Acesso Externo (Cloudflare Tunnel)
 - **Jellyfin:** [https://jelly.moothz.win](https://jelly.moothz.win)
@@ -36,6 +37,7 @@ As configurações de cada container estão localizadas na pasta `./config` no d
 - `./config/bookshelf`
 - `./config/jackett`
 - `./config/qbittorrent`
+- `./config/overseerr-bot`
 
 ### Armazenamento de Mídia e Downloads
 Mapeado para o disco externo em `/mnt/wd2/arr`:
@@ -61,6 +63,12 @@ Para permitir o acesso via Cloudflare Tunnel e IP local simultaneamente, foram f
 
 ### 3. Sonarr
 A porta externa foi alterada para **8991** pois a porta padrão 8989 já estava em uso no sistema host. **Nota:** Internamente na rede do Docker, ele ainda responde na porta 8989.
+
+### 4. Overseerr-Bot (Telegram)
+Foi adicionado um bot para permitir pedidos diretamente pelo Telegram.
+- **Configuração:** O bot requer um **Usuário Local** no Jellyseerr.
+- **Como configurar:** Vá em `Jellyseerr -> Settings -> Users -> Create Local User`. Use este usuário para logar no bot após o comando `/start`.
+- **Senha do Bot:** Definida inicialmente como `moothz_password` (pode ser alterada no chat).
 
 ---
 
