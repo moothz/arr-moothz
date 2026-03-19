@@ -87,6 +87,16 @@ services:
       - 9117:9117
     restart: unless-stopped
 
+  overseerr-bot:
+    image: chimpanzeesweetrolls/overseerrrequestviatelegrambot:latest
+    container_name: overseerr-bot
+    environment:
+      - BOT_TOKEN=8366447590:AAE5BDsgMUv16FghiuLVmQQQq7ybe_hXc7k
+      - OVERSEERR_API_KEY=MTc3Mzg2NTY4MTQ4MGNiMzEyZjVlLTlmZWItNDYwYy05ODhmLWU5YzlmNzMyZjRmMw==
+      - OVERSEERR_URL=http://jellyseerr:5055
+      - ALLOWED_USERS=382359487
+    restart: unless-stopped
+
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
